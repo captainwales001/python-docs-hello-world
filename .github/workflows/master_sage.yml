@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - sage
 on:
   push:
     branches:
-      - master
+      - stage
   workflow_dispatch:
 
 jobs:
@@ -74,5 +74,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'sage'
-          slot-name: 'Production'
+          slot-name: 'Dev'
           
